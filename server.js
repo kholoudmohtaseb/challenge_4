@@ -5,19 +5,11 @@ const port = 8080;
 const app = express()
 
 
-// const JsonToCsv = require('./client/app.js').JsonToCsv;
-// const fs = require('fs');
 
 // Inside your server file, you can simply point express to your client folder
-app.use(express.static(__dirname + '/client'));
-
-// app.post('/', function (req, res) {
-//     csv = JsonToCsv(JSON.parse)
-// })
-
+app.use(express.static(__dirname + '/public'));
 
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
-
